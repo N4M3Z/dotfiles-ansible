@@ -1,0 +1,17 @@
+export ZPLUG_HOME="/usr/local/opt/zplug"
+
+if [[ -s "${ZPLUG_HOME}/init.zsh" ]]
+then
+    export ZPLUG_LOADFILE="${ZDOTDIR:-$HOME}/.zsh/zplug.zsh"
+    source "${ZPLUG_HOME}/init.zsh"
+
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
+        echo
+    fi
+    zplug load
+
+fi
