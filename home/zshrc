@@ -1,5 +1,15 @@
 export ZPLUG_HOME="/usr/local/opt/zplug"
 
+if [[ -s "${ZDOTDIR:-$HOME}/.zconfig" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zconfig"
+fi
+
+# Disable color and theme in dumb terminals.
+if [[ "$TERM" == 'dumb' ]]; then
+    zstyle ':dotzsh:*:*' color 'no'
+    zstyle ':dotzsh:module:prompt' theme 'off'
+fi
+
 if [[ -s "${ZPLUG_HOME}/init.zsh" ]]
 then
     export ZPLUG_LOADFILE="${ZDOTDIR:-$HOME}/.zsh/zplug.zsh"
@@ -12,6 +22,7 @@ then
         fi
         echo
     fi
-    zplug load
+    # zplug load
+    zplug load --verbose
 
 fi

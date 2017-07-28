@@ -170,6 +170,8 @@ zstyle ':dotzsh:module:history-substring-search' globbing-flags 'i'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ":dotzsh:module:prompt" theme "powerlevel9k"
+# zstyle ":dotzsh:module:prompt" theme "powerline"
+# zstyle ":dotzsh:module:prompt" theme "prezto-powerline"
 
 # Set default alias tip text
 zstyle ":dotzsh:module:alias-tips" text "Alias tip: "
