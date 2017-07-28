@@ -85,10 +85,10 @@ export GPGKEY="$(gpg -K | awk 'NR==3 {print $2}' | sed 's/4096R\///g')"
 zplug "erichs/composure", \
     use:composure.sh
 
-
 zplug "bhilburn/powerlevel9k", \
     use:"powerlevel9k.zsh-theme", \
-    as:theme
+    as:theme, \
+    hook-load: "dotzsh-module-load prompt"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose
