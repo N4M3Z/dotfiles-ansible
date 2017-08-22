@@ -81,6 +81,14 @@ zplug "StackExchange/blackbox", \
 
 export GPGKEY="$(gpg -K | awk 'NR==3 {print $2}' | sed 's/4096R\///g')"
 
+export ENHANCD_FILTER=fzy:fzf:peco
+export ENHANCD_COMMAND=cd
+export ENHANCD_DOT_SHOW_FULLPATH=1
+
+zplug "b4b4r07/enhancd", \
+    as:plugin, \
+    use:init.sh, \
+    on:"modules/directory"
 
 zplug "erichs/composure", \
     use:composure.sh
