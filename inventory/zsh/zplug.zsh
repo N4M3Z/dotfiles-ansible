@@ -47,6 +47,7 @@ zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme, hook-load
 zplug "voronkovich/phpcs.plugin.zsh", as:plugin
 zplug "voronkovich/phpunit.plugin.zsh", as:plugin
 
+zplug "~/.zsh/modules/tex", from:local, defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose
