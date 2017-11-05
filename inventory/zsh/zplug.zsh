@@ -49,6 +49,7 @@ zplug "voronkovich/phpunit.plugin.zsh", as:plugin
 
 zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosuggestions"
 zplug "~/.zsh/modules/helper", from:local, on:"modules/helper"
+zplug "~/.zsh/modules/history", from:local, on:"modules/history"
 zplug "~/.zsh/modules/history-substring-search", from:local, on:"zsh-users/zsh-history-substring-search", defer:2
 zplug "~/.zsh/modules/php", from:local, on:"zsh-users/zsh-history-substring-search"
 zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
