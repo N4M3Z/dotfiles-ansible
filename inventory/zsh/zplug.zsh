@@ -26,10 +26,7 @@ zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh, on:"zsh-user
 
 zplug "ascii-soup/zsh-url-highlighter", use:url/url-highlighter.zsh, on:"zsh-users/zsh-syntax-highlighting", defer:2
 
-zplug "djui/alias-tips", use:alias-tips.plugin.zsh
-
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
-zstyle -s ":dotzsh:module:alias-tips" text "ZSH_PLUGINS_ALIAS_TIPS_TEXT"
+zplug "djui/alias-tips", use:"alias-tips.plugin.zsh"
 
 zplug "StackExchange/blackbox", as:plugin
 
@@ -47,6 +44,7 @@ zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme, defer:3
 zplug "voronkovich/phpcs.plugin.zsh", as:plugin
 zplug "voronkovich/phpunit.plugin.zsh", as:plugin
 
+zplug "~/.zsh/modules/alias-tips", from:local, on:"djui/alias-tips"
 zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosuggestions"
 zplug "~/.zsh/modules/dircycle", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/directory", from:local, on:"modules/directory"
