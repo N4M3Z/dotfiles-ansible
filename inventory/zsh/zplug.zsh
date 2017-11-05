@@ -58,6 +58,7 @@ zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
 zplug "~/.zsh/modules/utility", from:local, on:"modules/utility"
 zplug "~/.zsh/modules/tex", from:local
 zplug "~/.zsh/modules/todo-txt", from:local
+zplug "~/.zsh/modules/wordchar", from:local
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose
