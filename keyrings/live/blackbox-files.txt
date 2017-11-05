@@ -1,4 +1,5 @@
 private/private
 private/todo/done.txt
+private/todo/report.txt
 private/todo/todo.txt
 private/zhistory
