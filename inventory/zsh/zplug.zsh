@@ -19,6 +19,7 @@ zplug "modules/tmux", from:prezto
 # zplug 'modules/prompt', from:prezto
 
 zplug "plugins/composer", from:oh-my-zsh
+zplug "w00fz/142b6b19750ea6979137b963df959d11", from:gist, as:command, rename-to:sphp, use:sphp.sh
 
 zplug "zsh-users/zsh-syntax-highlighting", as:plugin, defer:1
 zplug "zsh-users/zsh-history-substring-search", as:plugin, on:"zsh-users/zsh-syntax-highlighting", defer:2
