@@ -48,6 +48,7 @@ zplug "~/.zsh/modules/alias-tips", from:local, on:"djui/alias-tips"
 zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosuggestions"
 zplug "~/.zsh/modules/dircycle", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/directory", from:local, on:"modules/directory"
+zplug "~/.zsh/modules/enhancd", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/helper", from:local, on:"modules/helper"
 zplug "~/.zsh/modules/history", from:local, on:"modules/history"
 zplug "~/.zsh/modules/history-substring-search", from:local, on:"zsh-users/zsh-history-substring-search", defer:2
