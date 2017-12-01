@@ -36,9 +36,10 @@ call plug#begin('~/.vim/plugged')
     "" }
 
     "" Interface {
-    "Plug 'powerline/powerline'              " Powerline is a statusline plugin for vim
     Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file finder
-    Plug 'vim-airline/vim-airline'          " Status line and tab bar
+    if (has('nvim'))
+        Plug 'vim-airline/vim-airline'          " Status line and tab bar
+    endif
     Plug 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the 'gutter
     Plug 'majutsushi/tagbar'                " Class outline viewer
     Plug 'myusuf3/numbers.vim'              " numbers.vim is a vim plugin for better line numbers
@@ -59,6 +60,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'editorconfig/editorconfig-vim'    " EditorConfig plugin for Vim
     Plug 'mattn/webapi-vim'                 " Interface to Web API
     Plug 'freitass/todo.txt-vim'            " Vim plugin for todo.txt
+    Plug 'tmux-plugins/vim-tmux'            " Vim plugin for .tmux.conf.
     "Plug 'severin-lemaignan/vim-minimap'    " Sublime Text-like minimap
     "" }
 
@@ -113,10 +115,30 @@ set mouse=a "set the mouse on for ever and ever
 "" }
 
 "" neovim {
-let g:python_host_prog='/Users/N4M3Z/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog='/Users/N4M3Z/.pyenv/versions/neovim3/bin/python'
+if (has("nvim"))
+    let g:python_host_prog='/Users/N4M3Z/.pyenv/versions/neovim2/bin/python'
+    let g:python3_host_prog='/Users/N4M3Z/.pyenv/versions/neovim3/bin/python'
+endif
 " }
 
+"" Powerline {
+" Neovim is currently incompatible with powerline
+if (!has("nvim"))
+    python3 from powerline.vim import setup as powerline_setup
+    python3 powerline_setup()
+    python3 del powerline_setup
+endif
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+"" Allow color schemes to do bright colors without forcing bold.
+"if &t_Co == 8 && $TERM !~# '^linux'
+    "set t_Co=16
+"endif
+"" }
 
 " Map the leader key to \ (default)
 "let mapleader="\\"
@@ -205,6 +227,10 @@ set listchars=tab:›\ ,eol:¬,trail:⋅,space:⋅
 "match ExtraWhitespace /\s\+$\|\t/
 "" }
 
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
 "" Completion {
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 "" }
@@ -244,10 +270,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
     "endif
     "set sessionoptions-=options
 "
-    "" Allow color schemes to do bright colors without forcing bold.
-    "if &t_Co == 8 && $TERM !~# '^linux'
-        "set t_Co=16
-    "endif
+
 "
     "autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 "
