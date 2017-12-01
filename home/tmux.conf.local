@@ -1,0 +1,10 @@
+# User customizations
+
+## Increase history size
+set -g history-limit 10000
+
+## Start with mouse mode enabled
+set -g mouse on
+
+## Make terminal vim and tmux work better together
+set -g focus-events on
