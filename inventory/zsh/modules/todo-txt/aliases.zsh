@@ -3,9 +3,13 @@ if (( ! $+commands[todo.sh] )); then
 fi
 
 alias todo='todo.sh'
-alias todols='todo -c ls'
-alias todoadd='todo -t add'
-alias todoto='todo -t addto'
-alias todorm='todo del'
-alias tododel='todo del'
-alias todomv='todo move'
+
+alias tls='todo -c list'
+alias tla='todo -c listall'
+alias tadd='todo -t add'
+alias tato='todo -t addto'
+alias trm='todo del'
+alias tmv='todo move'
+alias tpre='todo prepend'
+alias tapp='todo append'
+alias tpri='todo pri'
