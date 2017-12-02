@@ -16,7 +16,7 @@ zplug "modules/homebrew", from:prezto
 zplug "modules/git", from:prezto
 zplug "modules/osx", from:prezto
 zplug "modules/tmux", from:prezto
-zplug "modules/python", from:prezto, on:"powerline/powerline", defer:3
+# zplug "modules/python", from:prezto, on:"powerline/powerline", defer:3
 # zplug 'modules/prompt', from:prezto
 
 zplug "plugins/composer", from:oh-my-zsh
@@ -58,7 +58,7 @@ zplug "~/.zsh/modules/history", from:local, on:"modules/history"
 zplug "~/.zsh/modules/history-substring-search", from:local, on:"zsh-users/zsh-history-substring-search", defer:2
 zplug "~/.zsh/modules/php", from:local, on:"zsh-users/zsh-history-substring-search"
 # zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
-zplug "~/.zsh/modules/python", from:local, on:"modules/python", defer:3
+zplug "~/.zsh/modules/python", from:local, defer:3
 zplug "~/.zsh/modules/utility", from:local, on:"modules/utility"
 zplug "~/.zsh/modules/tex", from:local
 zplug "~/.zsh/modules/todo-txt", from:local
