@@ -9,8 +9,8 @@ zplug "modules/terminal", from:prezto
 zplug "modules/editor", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/directory", from:prezto
-zplug "modules/spectrum", from:prezto, on:"modules/helper",
-zplug "modules/utility", from:prezto, on:"modules/spectrum"
+zplug "modules/spectrum", from:prezto
+zplug "modules/utility", from:prezto
 zplug "modules/completion", from:prezto
 zplug "modules/homebrew", from:prezto
 zplug "modules/git", from:prezto
@@ -40,7 +40,8 @@ zplug "b4b4r07/epoch-cat", as:command, rename-to:ecat
 
 zplug "erichs/composure", use:composure.sh
 
-zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme, defer:3
+# zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme, defer:3
+zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh", defer:3
 
 zplug "voronkovich/phpcs.plugin.zsh", as:plugin
 zplug "voronkovich/phpunit.plugin.zsh", as:plugin
@@ -50,22 +51,13 @@ zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosugges
 zplug "~/.zsh/modules/dircycle", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/directory", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/enhancd", from:local, on:"modules/directory"
+zplug "~/.zsh/modules/environment", from:local, on:"modules/environment"
 zplug "~/.zsh/modules/helper", from:local, on:"modules/helper"
 zplug "~/.zsh/modules/history", from:local, on:"modules/history"
 zplug "~/.zsh/modules/history-substring-search", from:local, on:"zsh-users/zsh-history-substring-search", defer:2
 zplug "~/.zsh/modules/php", from:local, on:"zsh-users/zsh-history-substring-search"
-zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
+# zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
 zplug "~/.zsh/modules/utility", from:local, on:"modules/utility"
 zplug "~/.zsh/modules/tex", from:local
 zplug "~/.zsh/modules/todo-txt", from:local
 zplug "~/.zsh/modules/wordchar", from:local
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose
-then
-    printf "Install? [y/N]: "
-    if read -q
-    then
-        echo; zplug install
-    fi
-fi
