@@ -11,9 +11,6 @@
 #      Martin Zeman <https://github.com/N4M3Z>
 #
 
-# Load dependencies.
-dotzsh-module-load "helper"
-
 ## Directory operations
 #alias ..="cd .."     # handled by auto_cd
 #alias ...="cd ../.." # handled by auto_cd
