@@ -16,6 +16,7 @@ zplug "modules/homebrew", from:prezto
 zplug "modules/git", from:prezto
 zplug "modules/osx", from:prezto
 zplug "modules/tmux", from:prezto
+zplug "modules/python", from:prezto, on:"powerline/powerline", defer:3
 # zplug 'modules/prompt', from:prezto
 
 zplug "plugins/composer", from:oh-my-zsh
@@ -41,13 +42,13 @@ zplug "b4b4r07/epoch-cat", as:command, rename-to:ecat
 zplug "erichs/composure", use:composure.sh
 
 # zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme, defer:3
-zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh", defer:3
+zplug "powerline/powerline", use:"powerline/bindings/zsh/powerline.zsh", on:"modules/environment", defer:1
 
 zplug "voronkovich/phpcs.plugin.zsh", as:plugin
 zplug "voronkovich/phpunit.plugin.zsh", as:plugin
 
 zplug "~/.zsh/modules/alias-tips", from:local, on:"djui/alias-tips"
-zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosuggestions"
+zplug "~/.zsh/modules/autosuggestions", from:local, on:"zsh-users/zsh-autosuggestions", defer:2
 zplug "~/.zsh/modules/dircycle", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/directory", from:local, on:"modules/directory"
 zplug "~/.zsh/modules/enhancd", from:local, on:"modules/directory"
@@ -57,6 +58,7 @@ zplug "~/.zsh/modules/history", from:local, on:"modules/history"
 zplug "~/.zsh/modules/history-substring-search", from:local, on:"zsh-users/zsh-history-substring-search", defer:2
 zplug "~/.zsh/modules/php", from:local, on:"zsh-users/zsh-history-substring-search"
 # zplug "~/.zsh/modules/prompt", from:local, on:"bhilburn/powerlevel9k", defer:3
+zplug "~/.zsh/modules/python", from:local, on:"modules/python", defer:3
 zplug "~/.zsh/modules/utility", from:local, on:"modules/utility"
 zplug "~/.zsh/modules/tex", from:local
 zplug "~/.zsh/modules/todo-txt", from:local
