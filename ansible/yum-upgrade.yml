@@ -1,0 +1,12 @@
+---
+- name: "Yum upgrade"
+
+  tasks:
+    - name: "Upgrade all packages"
+      yum:
+          name: '*'
+          state: latest
+
+    - name: "Output yum"
+      debug:
+          msg: "{{ yum }}"

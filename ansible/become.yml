@@ -1,0 +1,14 @@
+---
+- name: "Test become"
+  become: true
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: "Execute whoami"
+      command: whoami
+      register: whoami
+
+    - name: "Output whoami"
+      debug:
+          msg: "{{ whoami }}"
