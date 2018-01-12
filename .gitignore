@@ -1,3 +1,6 @@
 # Private
 keyrings/live/secring.gpg
 private/*
+
+# Ansible
+*.retry
