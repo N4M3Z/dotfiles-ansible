@@ -13,3 +13,7 @@ alias tmv='todo move'
 alias tpre='todo prepend'
 alias tapp='todo append'
 alias tpri='todo pri'
+
+# todo.txt plugins
+alias tbr='todo bringforward'
+
