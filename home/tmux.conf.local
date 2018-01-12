@@ -15,5 +15,8 @@ set -g mouse on
 ## Make terminal vim and tmux work better together
 set -g focus-events on
 
+## Synchronize panes hotkey
+bind-key a set-window-option synchronize-panes
+
 ## Continuum status
 #set -g status-right 'Continuum status: #{continuum_status}'
