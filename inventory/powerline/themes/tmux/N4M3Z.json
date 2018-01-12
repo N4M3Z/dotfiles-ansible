@@ -1,28 +1,38 @@
 {
-	"segments": {
-		"right": [
-			{
-				"function": "powerline.segments.common.sys.uptime",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.common.sys.system_load",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.common.time.date"
-			},
-			{
-				"function": "powerline.segments.common.time.date",
-				"name": "time",
-				"args": {
-					"format": "%H:%M",
-					"istime": true
-				}
-			},
-			{
-				"function": "powerline.segments.common.net.hostname"
-			}
-		]
-	}
+    "segments": {
+        "right": [
+            {
+                "function": "powerline.segments.common.sys.uptime",
+                "priority": 40
+            },
+            {
+                "function": "powerline.segments.common.net.network_load",
+                "priority": 60
+            },
+            {
+                "function": "powerline.segments.common.sys.system_load",
+                "priority": 70
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "format": "%Y-%m-%d",
+                    "istime": true
+                },
+                "priority": 80
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "format": "%H:%M",
+                    "istime": true
+                },
+                "priority": 90
+            },
+            {
+                "function": "powerline.segments.common.net.hostname",
+                "priority": 100
+            }
+        ]
+    }
 }

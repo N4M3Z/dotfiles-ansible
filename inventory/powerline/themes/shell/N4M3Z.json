@@ -1,90 +1,80 @@
 {
-	"default_module": "powerline.segments.common",
-	"segment_data":
-	{
-		"hostname":
-		{
-			"before": " ",
-			"args":
-			{
-				"only_if_ssh": false,
-				"exclude_domain": true
-			}
-		},
-		"virtualenv":
-		{
-			"before": "ⓔ  "
-		},
-		"branch":
-		{
-			"before": " ",
-			"args":
-			{
-				"status_colors": true
-			}
-		},
-		"cwd":
-		{
-			"args":
-			{
-				"use_path_separator": true,
-				"dir_limit_depth": 2
-			}
-		}
-	},
+    "default_module": "powerline.segments.common",
+    "segment_data": {
+        "hostname": {
+            "before": " ",
+            "args": {
+                "only_if_ssh": false,
+                "exclude_domain": true
+            }
+        },
+        "virtualenv": {
+            "before": "ⓔ  "
+        },
+        "branch": {
+            "before": " ",
+            "args": {
+                "status_colors": true
+            }
+        },
+        "cwd": {
+            "args": {
+                "use_path_separator": true,
+                "dir_limit_depth": 2
+            }
+        }
+    },
 
 
-	"segments": {
-		"left": [
-			{
-				"function": "powerline.segments.shell.mode"
-			},
-			{
-				"function": "powerline.segments.common.net.hostname",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.env.user",
-				"priority": 20
-			},
-			{
-				"function": "powerline.segments.shell.cwd",
-				"priority": 30
-			},
-			{
-				"function": "powerline.segments.shell.jobnum",
-				"priority": 40
-			},
-			{
-				"function": "powerline.segments.common.env.virtualenv",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.common.vcs.branch",
-				"priority": 60
-			}
-		],
-		"right": [
-			{
-				"function": "powerline.segments.shell.last_pipe_status",
-				"priority": 80
-			},
-			{
-				"function": "powerline.segments.common.time.date",
-				"args":
-				{
-					"format": "%Y-%m-%d"
-				},
-				"priority": 90
-			},
-			{
-				"function": "powerline.segments.common.time.date",
-				"args":
-				{
-					"format": "%H:%M:%S"
-				},
-				"priority": 100
-			}
-		]
-	}
+    "segments": {
+        "left": [
+            {
+                "function": "powerline.segments.shell.mode"
+            },
+            {
+                "function": "powerline.segments.common.net.hostname",
+                "priority": 10
+            },
+            {
+                "function": "powerline.segments.common.env.user",
+                "priority": 20
+            },
+            {
+                "function": "powerline.segments.shell.cwd",
+                "priority": 30
+            },
+            {
+                "function": "powerline.segments.shell.jobnum",
+                "priority": 40
+            },
+            {
+                "function": "powerline.segments.common.env.virtualenv",
+                "priority": 50
+            },
+            {
+                "function": "powerline.segments.common.vcs.branch",
+                "priority": 60
+            }
+        ],
+        "right": [
+            {
+                "function": "powerline.segments.shell.last_pipe_status",
+                "priority": 80
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "format": "%Y-%m-%d"
+                },
+                "priority": 90
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "format": "%H:%M:%S"
+                },
+                "priority": 100
+            }
+        ]
+    }
 }
