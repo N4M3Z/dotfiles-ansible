@@ -123,3 +123,32 @@ function dotzsh-module-load()
 
     unset dzmodule{s,} dzmodload_{module_,}{start,stop,elapsed}
 }
+
+##
+# Simple caching
+# @brief Build simple cache from all modules to speed up loading
+#
+function dotzsh-module-cache()
+{
+    plugins=(
+        alias-tips
+        dircycle
+        directory
+        enhancd
+        environment
+        helper
+        history
+        php
+        tex
+        todo-txt
+        utility
+        wordchar
+        autosuggestions
+        history-substring-search
+        python
+    )
+
+    if [[ ! -f ${ZDOTDIR:-${HOME}}/.zsh/modules/cache.zsh ]]
+        cat ${ZDOTDIR:-${HOME}}/.zsh/modules/${^plugins}/*.zsh > ${ZDOTDIR:-${HOME}}/.zsh/modules/cache.zsh
+    fi
+}
