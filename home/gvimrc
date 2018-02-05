@@ -62,7 +62,7 @@ set background=dark
 set transparency=4
 set termguicolors
 "colorscheme spacemacs-theme
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h16
+set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h16
 set fillchars+=stl:\ ,stlnc:\
 
 let g:Powerline_symbols='fancy'

@@ -124,9 +124,17 @@ endif
 "" Powerline {
 " Neovim is currently incompatible with powerline
 if (!has("nvim"))
-    python3 from powerline.vim import setup as powerline_setup
-    python3 powerline_setup()
-    python3 del powerline_setup
+    if has("python3")
+        python3 from powerline.vim import setup as powerline_setup
+        python3 powerline_setup()
+        python3 del powerline_setup
+        "g:powerline_pycmd="python3"
+    elseif has("python")
+        python from powerline.vim import setup as powerline_setup
+        python powerline_setup()
+        python del powerline_setup
+        "g:powerline_pycmd="python"
+    endif
 endif
 
 " Always show statusline
