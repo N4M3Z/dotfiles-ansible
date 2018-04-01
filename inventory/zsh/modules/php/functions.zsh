@@ -2,7 +2,6 @@ function php-brew-reinstall()
 {
     brew reinstall homebrew/php/php70 \
         --with-debug \
-        --with-enchant \
         --with-gmp \
         --with-homebrew-curl \
         --with-homebrew-libressl \

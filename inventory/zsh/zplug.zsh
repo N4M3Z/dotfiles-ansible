@@ -29,7 +29,7 @@ zplug "ascii-soup/zsh-url-highlighter", as:plugin, use:url/url-highlighter.zsh, 
 
 zplug "djui/alias-tips", as:plugin, use:"alias-tips.plugin.zsh"
 
-zplug "StackExchange/blackbox", as:command
+zplug "StackExchange/blackbox", as:"plugin"
 
 zplug "b4b4r07/enhancd", as:plugin, use:init.sh, on:"modules/directory", defer:3
 
@@ -54,7 +54,7 @@ zplug "~/.zsh/modules/todo-txt", as:plugin, from:local
 zplug "~/.zsh/modules/utility", as:plugin, from:local, on:"modules/utility"
 zplug "~/.zsh/modules/wordchar", as:plugin, from:local
 
-zplug "erichs/composure", as:plugin, use:"composure.sh", lazy:true
+# zplug "erichs/composure", as:plugin, use:"composure.sh", lazy:true
 zplug "b4b4r07/epoch-cat", as:command, rename-to:"ecat", lazy:true
 
 zplug "voronkovich/phpcs.plugin.zsh", as:plugin, lazy:true
